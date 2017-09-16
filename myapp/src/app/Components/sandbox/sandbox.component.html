@@ -1,17 +1,29 @@
 <h1 class="special">Hello World From The HTML File</h1>
-{{ people }}
-<ul>
-    <li *ngFor="let person of people">
-        {{ person }}
-    </li>
-</ul>
-<ul>
-    <li *ngFor="let person of people; let i = index;">
-        {{ i + 1 }} {{ person }}
-    </li>
-</ul>
-<ul>
-    <li *ngFor="let person of people2; let i = index;">
-        {{ person.firstName }} {{ person.lastName }}
-    </li>
-</ul>
+
+<h2>
+    <!--<span *ngIf="showName">My Name Is {{name}}</span>
+    <span *ngIf="!showName">Hello World</span>-->
+
+    <span *ngIf="showName; else noName">My Name Is {{name}}</span>
+    <ng-template #noName>I Don't Have Name</ng-template>
+
+    <p>My Name Is {{ showName ? name : 'I Dont Have A Name' }}</p>
+
+    <hr>
+
+    <div [ngSwitch]="greeting">
+        <div *ngSwitchCase="'1'">
+            Hello World
+        </div>
+        <div *ngSwitchCase="'2'">
+            Hello Moon
+        </div>
+        <div *ngSwitchCase="'3'">
+            Hello Sky
+        </div>
+        <div *ngSwitchDefault>
+            Hello Sun
+        </div>
+    </div>
+
+</h2>
