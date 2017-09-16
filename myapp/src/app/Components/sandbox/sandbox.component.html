@@ -1,29 +1,57 @@
 <h1 class="special">Hello World From The HTML File</h1>
 
-<h2>
+<!--Conditionals-->
+
+<!--<h2>
     <!--<span *ngIf="showName">My Name Is {{name}}</span>
     <span *ngIf="!showName">Hello World</span>-->
 
-    <span *ngIf="showName; else noName">My Name Is {{name}}</span>
+<!--<span *ngIf="showName; else noName">My Name Is {{name}}</span>
     <ng-template #noName>I Don't Have Name</ng-template>
+-->
+<!--    <p>My Name Is {{ showName ? name : 'I Dont Have A Name' }}</p>-->
 
-    <p>My Name Is {{ showName ? name : 'I Dont Have A Name' }}</p>
+<!--    <hr>-->
 
-    <hr>
+<!--    <div [ngSwitch]="greeting">-->
+<!--        <div *ngSwitchCase="'1'">-->
+<!--            Hello World-->
+<!--        </div>-->
+<!--        <div *ngSwitchCase="'2'">-->
+<!--            Hello Moon-->
+<!--        </div>-->
+<!--        <div *ngSwitchCase="'3'">-->
+<!--            Hello Sky-->
+<!--        </div>-->
+<!--        <div *ngSwitchDefault>-->
+<!--            Hello Sun-->
+<!--        </div>-->
+<!--    </div>-->
 
-    <div [ngSwitch]="greeting">
-        <div *ngSwitchCase="'1'">
-            Hello World
-        </div>
-        <div *ngSwitchCase="'2'">
-            Hello Moon
-        </div>
-        <div *ngSwitchCase="'3'">
-            Hello Sky
-        </div>
-        <div *ngSwitchDefault>
-            Hello Sun
-        </div>
-    </div>
+<!--</h2>-->
+<!---->
 
-</h2>
+<!--3 ways to bind properties-->
+
+<!--<div>
+
+    <img src="{{ imageUrl }}">
+
+
+</div>
+<div>
+
+    <img [src]="imageUrl">
+
+</div>
+<div>
+
+    <img bind-src="imageUrl">
+
+</div>
+
+<h4>Image Location: <span [textContent]="imageUrl"></span></h4>-->
+
+<h2>Create Post</h2>
+<p [hidden]="isUnchanged">Post Has Been Changed Please Save</p>
+<button [disabled]="isUnchanged">Save</button>
