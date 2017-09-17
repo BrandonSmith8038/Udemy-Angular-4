@@ -95,7 +95,7 @@
 <div *ngIf="value">
     <h1>{{ text }}</h1>
 </div>-->
-<div>
+<!--<div>
     <input type="text" (keyup)="fireEvent($event)" placeholder="Key UP">
 </div>
 <div>
@@ -121,4 +121,23 @@
     <input type="text" (keyup)="changeText($event)" placeholder="Change Text" value={{text}}>
 </div>
 
-<h2>{{ text }}</h2>
+<h2>{{ text }}</h2>-->
+
+
+<form>
+    <div class="container">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" [(ngModel)]="name" name="name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Age</label>
+            <input type="number" [(ngModel)]="age" name="age" class="form-control">
+        </div>
+        <input type="submit" value="submit" class="btn btn-success">
+
+        <h4>{{ name }}</h4>
+        <h4>{{ age }}</h4>
+    </div>
+
+</form>
