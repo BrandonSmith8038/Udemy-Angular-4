@@ -10,13 +10,18 @@ import { Component } from '@angular/core';
 
 export class SandboxComponent {
     
-   name:string = '';
-   users:string[]=['John Doe', 'Mary Sawson', 'Kevin Smith']
+   user = {
+       name:'',
+       email:'',
+       phone:''
+   }
    
-   
-   onSubmit(){
-       this.users.push(this.name);
-       this.name = '';
+   onSubmit({value, valid}){
+       if(valid){
+           console.log(value)
+       }else{
+           console.log("form is invalid")
+       }
    }
    
    
