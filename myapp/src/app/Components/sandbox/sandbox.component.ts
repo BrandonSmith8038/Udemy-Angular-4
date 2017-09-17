@@ -9,9 +9,9 @@ import { Component } from '@angular/core';
 })
 
 export class SandboxComponent {
-   birthday = new Date(1981, 1, 15);
-   total:number = 500;
-   fee:number = 0.5;
+   fireEvent(e){
+       console.log(e)
+   }
 }
 
 

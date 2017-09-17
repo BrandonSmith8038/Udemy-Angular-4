@@ -67,11 +67,25 @@
 <div [ngStyle]="currentStyles">This div is initaly savable and special</div>
 -->
 
-<p>My birthday is {{ birthday | date}}</p>
+<!--<p>My birthday is {{ birthday | date}}</p>
 <p>My birthday is {{ birthday | date:"MM-dd-yy"}}</p>
 <p>My birthday is {{ birthday | date:"MM-dd-yyyy"}}</p>
 <p>I was born in {{ birthday | date:"yyyy"}}</p>
 <p>I love {{ "Cake" | uppercase }}</p>
 <p>I love {{ "Cake" | lowercase }}</p>
 <p>Your total is {{ total | currency:"USD":"1"}}</p>
-<p>Our fee is {{ fee | percent }}</p>
+<p>Our fee is {{ fee | percent }}</p>-->
+
+<button (click)="fireEvent($event)">Click Event</button>
+<hr>
+<button (mouseover)="fireEvent($event)">Mouse Over Event</button>
+<hr>
+<button (mousedown)="fireEvent($event)">Mouse Down Event</button>
+<hr>
+<button (mouseup)="fireEvent($event)">Mouse Up Event</button>
+<hr>
+<button (dblclick)="fireEvent($event)">Double Click Event</button>
+<hr>
+<button (drag)="fireEvent($event)">Drag Event</button>
+<hr>
+<button (dragover)="fireEvent($event)">Drag Over Event</button>
