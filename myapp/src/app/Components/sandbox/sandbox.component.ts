@@ -10,16 +10,38 @@ import { DataService } from '../../Services/data.services'
 
 export class SandboxComponent {
     
-    data:any[];
+   users:any[];
+   user = {
+       name:'',
+       email:'',
+       phone:''
+   }
     
     
     
   constructor(public dataService:DataService)
    {
-        this.dataService.getData().subscribe(data => {
-            this.data.push(data);
-        }); 
+        this.dataService.getUsers().subscribe(users => {
+            this.users = users;
+        });
    }
+   
+   onSubmit(){
+        this.dataService.addUser(this.user).subscribe(user => {
+            console.log(user);
+            this.users.unshift(user);
+        });
+    }
+    
+    onDeleteClick(id){
+        this.dataService.deleteUser(id).subscribe(res => {
+            for(let i=0;i<this.users.length;i++){
+                if(this.users[i].id == id){
+                    this.users.splice(i,1);
+                }
+            }
+        });
+    }
 }
 
 
