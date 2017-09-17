@@ -10,10 +10,12 @@ import { DataService } from './Services/data.services';
 import { HomeComponent } from './Components/home/home.component';
 import { AboutComponent } from './Components/about/about.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
+import { UserDetailsComponent } from './Components/user-details/user-details.component';
 
 const appRoutes: Routes = [
       {path:'', component:HomeComponent},
-      {path:'about', component:AboutComponent}
+      {path:'about', component:AboutComponent},
+      {path:'user/:id', component:UserDetailsComponent}
   ];
 
 @NgModule({
@@ -22,7 +24,8 @@ const appRoutes: Routes = [
     SandboxComponent,
     HomeComponent,
     AboutComponent,
-    NavbarComponent
+    NavbarComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
