@@ -9,8 +9,21 @@ import { Component } from '@angular/core';
 })
 
 export class SandboxComponent {
-    imageUrl = 'http://lorempixel.com/400/200';
-    isUnchanged:boolean = true;
+    isSpecial = true;
+    canSave = false;
+    currentClasses = {};
+    
+    constuctor(){
+        
+        this.setCurrentClasses();
+        
+    }
+    setCurrentClasses(){
+        this.currentClasses = {
+            saveable:this.canSave,
+            special:this.isSpecial
+        }
+    }
 }
 
 
