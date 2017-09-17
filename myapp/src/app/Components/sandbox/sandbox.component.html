@@ -76,7 +76,7 @@
 <p>Your total is {{ total | currency:"USD":"1"}}</p>
 <p>Our fee is {{ fee | percent }}</p>-->
 
-<button (click)="fireEvent($event)">Click Event</button>
+<!--<button (click)="fireEvent($event)">Click Event</button>
 <hr>
 <button (mouseover)="fireEvent($event)">Mouse Over Event</button>
 <hr>
@@ -88,4 +88,10 @@
 <hr>
 <button (drag)="fireEvent($event)">Drag Event</button>
 <hr>
-<button (dragover)="fireEvent($event)">Drag Over Event</button>
+<button (dragover)="fireEvent($event)">Drag Over Event</button>-->
+
+
+<button (click)="changeValue()">Change Value</button>
+<div *ngIf="value">
+    <h1>{{ text }}</h1>
+</div>
