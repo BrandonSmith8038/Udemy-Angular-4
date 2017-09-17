@@ -11,7 +11,15 @@ import { Component } from '@angular/core';
 export class SandboxComponent {
     
    name:string = '';
-   age:number = 0;
+   users:string[]=['John Doe', 'Mary Sawson', 'Kevin Smith']
+   
+   
+   onSubmit(){
+       this.users.push(this.name);
+       this.name = '';
+   }
+   
+   
 }
 
 

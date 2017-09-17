@@ -1,39 +1,41 @@
-<h1>Hello World From The HTML File</h1>
+<div class="container">
 
-<!--Conditionals-->
+    <h1>Hello World From The HTML File</h1>
 
-<!--<h2>
+    <!--Conditionals-->
+
+    <!--<h2>
     <!--<span *ngIf="showName">My Name Is {{name}}</span>
     <span *ngIf="!showName">Hello World</span>-->
 
-<!--<span *ngIf="showName; else noName">My Name Is {{name}}</span>
+    <!--<span *ngIf="showName; else noName">My Name Is {{name}}</span>
     <ng-template #noName>I Don't Have Name</ng-template>
 -->
-<!--    <p>My Name Is {{ showName ? name : 'I Dont Have A Name' }}</p>-->
+    <!--    <p>My Name Is {{ showName ? name : 'I Dont Have A Name' }}</p>-->
 
-<!--    <hr>-->
+    <!--    <hr>-->
 
-<!--    <div [ngSwitch]="greeting">-->
-<!--        <div *ngSwitchCase="'1'">-->
-<!--            Hello World-->
-<!--        </div>-->
-<!--        <div *ngSwitchCase="'2'">-->
-<!--            Hello Moon-->
-<!--        </div>-->
-<!--        <div *ngSwitchCase="'3'">-->
-<!--            Hello Sky-->
-<!--        </div>-->
-<!--        <div *ngSwitchDefault>-->
-<!--            Hello Sun-->
-<!--        </div>-->
-<!--    </div>-->
+    <!--    <div [ngSwitch]="greeting">-->
+    <!--        <div *ngSwitchCase="'1'">-->
+    <!--            Hello World-->
+    <!--        </div>-->
+    <!--        <div *ngSwitchCase="'2'">-->
+    <!--            Hello Moon-->
+    <!--        </div>-->
+    <!--        <div *ngSwitchCase="'3'">-->
+    <!--            Hello Sky-->
+    <!--        </div>-->
+    <!--        <div *ngSwitchDefault>-->
+    <!--            Hello Sun-->
+    <!--        </div>-->
+    <!--    </div>-->
 
-<!--</h2>-->
-<!---->
+    <!--</h2>-->
+    <!---->
 
-<!--3 ways to bind properties-->
+    <!--3 ways to bind properties-->
 
-<!--<div>
+    <!--<div>
 
     <img src="{{ imageUrl }}">
 
@@ -52,22 +54,22 @@
 
 <h4>Image Location: <span [textContent]="imageUrl"></span></h4>-->
 
-<!--<h2>Create Post</h2>
+    <!--<h2>Create Post</h2>
 <p [hidden]="isUnchanged">Post Has Been Changed Please Save</p>
 <button [disabled]="isUnchanged">Save</button>
 -->
 
-<!--<h4 [class.special]="isSpecial">This class biding is special.</h4>-->
-<!--<h4 [ngClass]="currentClasses">This div is initially special and savable</h4>-->
+    <!--<h4 [class.special]="isSpecial">This class biding is special.</h4>-->
+    <!--<h4 [ngClass]="currentClasses">This div is initially special and savable</h4>-->
 
-<!--<div [style.font-size]="isSpecial ? 'x-large' : 'smaller'">
+    <!--<div [style.font-size]="isSpecial ? 'x-large' : 'smaller'">
     Font size depends on isSpecial
 </div>
 
 <div [ngStyle]="currentStyles">This div is initaly savable and special</div>
 -->
 
-<!--<p>My birthday is {{ birthday | date}}</p>
+    <!--<p>My birthday is {{ birthday | date}}</p>
 <p>My birthday is {{ birthday | date:"MM-dd-yy"}}</p>
 <p>My birthday is {{ birthday | date:"MM-dd-yyyy"}}</p>
 <p>I was born in {{ birthday | date:"yyyy"}}</p>
@@ -76,7 +78,7 @@
 <p>Your total is {{ total | currency:"USD":"1"}}</p>
 <p>Our fee is {{ fee | percent }}</p>-->
 
-<!--<button (click)="fireEvent($event)">Click Event</button>
+    <!--<button (click)="fireEvent($event)">Click Event</button>
 <hr>
 <button (mouseover)="fireEvent($event)">Mouse Over Event</button>
 <hr>
@@ -91,11 +93,11 @@
 <button (dragover)="fireEvent($event)">Drag Over Event</button>-->
 
 
-<!--<button (click)="changeValue()">Change Value</button>
+    <!--<button (click)="changeValue()">Change Value</button>
 <div *ngIf="value">
     <h1>{{ text }}</h1>
 </div>-->
-<!--<div>
+    <!--<div>
     <input type="text" (keyup)="fireEvent($event)" placeholder="Key UP">
 </div>
 <div>
@@ -124,7 +126,7 @@
 <h2>{{ text }}</h2>-->
 
 
-<form>
+    <!--<form>
     <div class="container">
         <div class="form-group">
             <label>Name</label>
@@ -141,3 +143,23 @@
     </div>
 
 </form>
+-->
+
+
+    <form (submit)="onSubmit()" class="form-group">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" [(ngModel)]="name" name="name" class="form-control">
+        </div>
+        <input type="submit" value="Submit" class="btn btn-success">
+    </form>
+
+    <hr>
+
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let user of users">{{ user }}</li>
+    </ul>
+
+
+</div>
+<!--Container -->
