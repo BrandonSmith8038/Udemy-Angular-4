@@ -60,8 +60,18 @@
 <!--<h4 [class.special]="isSpecial">This class biding is special.</h4>-->
 <!--<h4 [ngClass]="currentClasses">This div is initially special and savable</h4>-->
 
-<div [style.font-size]="isSpecial ? 'x-large' : 'smaller'">
+<!--<div [style.font-size]="isSpecial ? 'x-large' : 'smaller'">
     Font size depends on isSpecial
 </div>
 
 <div [ngStyle]="currentStyles">This div is initaly savable and special</div>
+-->
+
+<p>My birthday is {{ birthday | date}}</p>
+<p>My birthday is {{ birthday | date:"MM-dd-yy"}}</p>
+<p>My birthday is {{ birthday | date:"MM-dd-yyyy"}}</p>
+<p>I was born in {{ birthday | date:"yyyy"}}</p>
+<p>I love {{ "Cake" | uppercase }}</p>
+<p>I love {{ "Cake" | lowercase }}</p>
+<p>Your total is {{ total | currency:"USD":"1"}}</p>
+<p>Our fee is {{ fee | percent }}</p>
