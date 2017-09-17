@@ -1,4 +1,4 @@
-<h1 class="special">Hello World From The HTML File</h1>
+<h1>Hello World From The HTML File</h1>
 
 <!--Conditionals-->
 
@@ -57,5 +57,11 @@
 <button [disabled]="isUnchanged">Save</button>
 -->
 
-<h4 [class.special]="isSpecial">This class biding is special.</h4>
-<h4 [ngClass]="currentClasses">This div is initially special and savable</h4>
+<!--<h4 [class.special]="isSpecial">This class biding is special.</h4>-->
+<!--<h4 [ngClass]="currentClasses">This div is initially special and savable</h4>-->
+
+<div [style.font-size]="isSpecial ? 'x-large' : 'smaller'">
+    Font size depends on isSpecial
+</div>
+
+<div [ngStyle]="currentStyles">This div is initaly savable and special</div>

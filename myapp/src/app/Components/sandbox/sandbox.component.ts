@@ -11,17 +11,17 @@ import { Component } from '@angular/core';
 export class SandboxComponent {
     isSpecial = true;
     canSave = false;
-    currentClasses = {};
+    currentStyles = {};
     
-    constuctor(){
-        
-        this.setCurrentClasses();
-        
+    constructor(){
+        this.setCurrentStyles();
     }
-    setCurrentClasses(){
-        this.currentClasses = {
-            saveable:this.canSave,
-            special:this.isSpecial
+    
+    setCurrentStyles(){
+        this.currentStyles = {
+            'font-style': this.canSave ? 'italic' : 'normal',
+            'font-size': this.isSpecial ? '24px' : '12px'
+            
         }
     }
 }
