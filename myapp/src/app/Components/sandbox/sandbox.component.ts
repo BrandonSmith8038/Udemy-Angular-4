@@ -9,15 +9,16 @@ import { Component } from '@angular/core';
 })
 
 export class SandboxComponent {
-   
-   text:string = 'Hello World';
-   value:boolean = true;
-   
-   changeValue(){
-       this.text = "Goodbye, World";
-       //this.value = false;
-       this.value = !this.value;
-   }
+    
+    text:string = "Hello";
+    
+    fireEvent(e){
+        console.log(e.type)
+    }
+    
+    changeText(e){
+        this.text = e.target.value;
+    }
 }
 
 

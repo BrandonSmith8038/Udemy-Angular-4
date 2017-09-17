@@ -91,7 +91,34 @@
 <button (dragover)="fireEvent($event)">Drag Over Event</button>-->
 
 
-<button (click)="changeValue()">Change Value</button>
+<!--<button (click)="changeValue()">Change Value</button>
 <div *ngIf="value">
     <h1>{{ text }}</h1>
+</div>-->
+<div>
+    <input type="text" (keyup)="fireEvent($event)" placeholder="Key UP">
 </div>
+<div>
+    <input type="text" (keydown)="fireEvent($event)" placeholder="Key Down">
+</div>
+<div>
+    <input type="text" (focus)="fireEvent($event)" placeholder="Focus">
+</div>
+<div>
+    <input type="text" (blur)="fireEvent($event)" placeholder="Blur">
+</div>
+<div>
+    <input type="cut" (blur)="fireEvent($event)" placeholder="Cut">
+</div>
+<div>
+    <input type="copy" (blur)="fireEvent($event)" placeholder="Copy">
+</div>
+<div>
+    <input type="paste" (blur)="fireEvent($event)" placeholder="Paste">
+</div>
+<hr>
+<div>
+    <input type="text" (keyup)="changeText($event)" placeholder="Change Text" value={{text}}>
+</div>
+
+<h2>{{ text }}</h2>
