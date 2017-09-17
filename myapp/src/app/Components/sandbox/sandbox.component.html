@@ -195,8 +195,8 @@
         </ul>
     </div>-->
 
-    <form (submit)="onSubmit(isEdit)">
-
+    <!--<form (submit)="onSubmit(isEdit)">
+    
         <div class="form-group">
             <label>Name</label>
             <input [(ngModel)]="user.name" name="name" type="text" class="form-control">
@@ -209,14 +209,14 @@
             <label>Phone</label>
             <input [(ngModel)]="user.phone" name="phone" type="text" class="form-control">
         </div>
-
+    
         <input type="submit" value="Submit" class="btn btn-dark">
         <button (click)="onClearClick()" class="btn btn-outline-dark">Clear Form</button>
-
+    
     </form>
-
+    
     <hr>
-
+    
     <div *ngFor="let user of users">
         <div class="card">
             <div class="card-body">
@@ -229,7 +229,7 @@
         <button (click)="onEditClick(user)" class="btn btn-primary btn-sm">Edit</button>
         <button (click)="onDeleteClick(user.id)" class="btn btn-danger btn-sm">Delete</button>
         <br><br>
-    </div>
+    </div>-->
 
 
 </div>
