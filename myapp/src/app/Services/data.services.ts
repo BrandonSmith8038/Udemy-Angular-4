@@ -27,4 +27,9 @@ import 'rxjs/add/operator/map';
            .map(res => res.json());
        }
        
+       updateUser(user){
+        return this.http.put('https://jsonplaceholder.typicode.com/users/'+user.id, user)
+            .map(res => res.json());
+    }
+       
     }

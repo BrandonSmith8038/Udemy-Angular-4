@@ -195,7 +195,7 @@
         </ul>
     </div>-->
 
-    <form (submit)="onSubmit()">
+    <form (submit)="onSubmit(isEdit)">
 
         <div class="form-group">
             <label>Name</label>
@@ -211,6 +211,7 @@
         </div>
 
         <input type="submit" value="Submit" class="btn btn-dark">
+        <button (click)="onClearClick()" class="btn btn-outline-dark">Clear Form</button>
 
     </form>
 
@@ -219,12 +220,13 @@
     <div *ngFor="let user of users">
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title list-group-item">Name: {{ user.name }}</h2>
-                <p class="card-text list-group-item">Email: {{ user.email }}</p>
-                <p class="card-text list-group-item">Phone: {{ user.phone }}</p>
+                <h2 class="card-title">Name: {{ user.name }}</h2>
+                <p class="card-text">Email: {{ user.email }}</p>
+                <p class="card-text">Phone: {{ user.phone }}</p>
             </div>
         </div>
         <br>
+        <button (click)="onEditClick(user)" class="btn btn-primary btn-sm">Edit</button>
         <button (click)="onDeleteClick(user.id)" class="btn btn-danger btn-sm">Delete</button>
         <br><br>
     </div>

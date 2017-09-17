@@ -12,10 +12,12 @@ export class SandboxComponent {
     
    users:any[];
    user = {
+       id:'',
        name:'',
        email:'',
        phone:''
    }
+   isEdit:boolean = false;
     
     
     
@@ -26,21 +28,37 @@ export class SandboxComponent {
         });
    }
    
-   onSubmit(){
-        this.dataService.addUser(this.user).subscribe(user => {
-            console.log(user);
-            this.users.unshift(user);
-        });
+   onSubmit(isEdit){
+        if(isEdit){
+            this.dataService.updateUser(this.user).subscribe(user => {
+                for(let i = 0;i < this.users.length;i++){
+                    if(this.users[i].id == this.user.id){
+                        this.users.splice(i,1);
+                    }
+                }
+                this.users.unshift(this.user);
+            });
+        } else {
+            this.dataService.addUser(this.user).subscribe(user => {
+                console.log(user);
+                this.users.unshift(user);
+            });
+        }
     }
-    
+
     onDeleteClick(id){
         this.dataService.deleteUser(id).subscribe(res => {
-            for(let i=0;i<this.users.length;i++){
+            for(let i = 0;i < this.users.length;i++){
                 if(this.users[i].id == id){
                     this.users.splice(i,1);
                 }
             }
         });
+    }
+
+    onEditClick(user){
+        this.isEdit = true;
+        this.user = user;
     }
 }
 
