@@ -33,4 +33,6 @@ export class ClientsComponent implements OnInit {
     this.totalOwed = total;
     console.log(this.totalOwed);
   }
+
+
 }
