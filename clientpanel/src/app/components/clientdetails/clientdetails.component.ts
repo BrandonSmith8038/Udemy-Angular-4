@@ -24,10 +24,9 @@ export class ClientdetailsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    //Get ID
-
+    // Get ID
     this.id = this.route.snapshot.params['id'];
-    //Get Client
+    // Get Client
     this.clientService.getClient(this.id).subscribe(client => {
       if(client.balance > 0){
         this.hasBalance = true;
@@ -35,6 +34,14 @@ export class ClientdetailsComponent implements OnInit {
       this.client = client;
       console.log(this.client);
     });
+  }
+
+  updateBalance(id:string){
+    // Update Client
+    this.clientService.updateClient(this.id, this.client);
+    this.flashMessagesService.show('Balance Updated', {class: 'alert-success', timeout: 4000 });
+    this.router.navigate(['/client/'+this.id]);
+    this.showBalanceUpdateInput = false;
   }
 
 }
