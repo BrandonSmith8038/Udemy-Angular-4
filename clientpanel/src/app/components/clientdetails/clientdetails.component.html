@@ -4,7 +4,7 @@
   </div>
   <div class="col-md-6">
     <div class="btn-group pull-right">
-      <a [routerLink]="['/edit-client'+id]" class="btn btn-dark">Edit</a>
+      <a [routerLink]="['/edit-client/'+id]" class="btn btn-dark">Edit</a>
       <button class="btn btn-danger" type="button"(click)="onDeleteClick()">Delete</button>
     </div>
   </div>
@@ -21,6 +21,9 @@
         </div>
         <div class="col-md-4">
           <h3 class="pull-right">
+            <small>
+              <a (click)="showBalanceUpdateInput = !showBalanceUpdateInput"><i class="fa fa-pencil"></i></a>
+            </small>
             Balance:
             <span
               [class.text-danger]="hasBalance"
@@ -37,9 +40,6 @@
                 </form>
               </div>
             </span>
-            <small>
-              <a (click)="showBalanceUpdateInput = !showBalanceUpdateInput"><i class="fa fa-pencil"></i></a>
-            </small>
           </h3>
         </div>
       </div>
