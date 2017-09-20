@@ -1,0 +1,9 @@
+img {
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+.navbar-dark .navbar-brand {
+  color: white;
+  margin-left: 20px;
+}

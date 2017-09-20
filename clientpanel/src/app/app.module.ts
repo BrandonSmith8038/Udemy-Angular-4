@@ -8,7 +8,7 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabase } from 'angularfire2/database';
-import { AngularFireAuth } from 'angularfire2/Auth';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 // Component Imports
 import { AppComponent } from './app.component';
@@ -28,6 +28,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 // Service Imports
 
 import { ClientService } from './services/client.service';
+import { AuthService } from './services/auth.service';
 
 const appRoutes: Routes = [
   {path: '', component: DashboardComponent},
@@ -68,7 +69,7 @@ export const firebaseConfig = {
     FormsModule,
     FlashMessagesModule
   ],
-  providers: [AngularFireAuth, AngularFireDatabase, ClientService],
+  providers: [AngularFireAuth,AngularFireDatabase,ClientService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
