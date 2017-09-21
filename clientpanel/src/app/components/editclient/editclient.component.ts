@@ -9,7 +9,7 @@ import { Client } from '../../models/client';
   templateUrl: './editclient.component.html',
   styleUrls: ['./editclient.component.css']
 })
-export class EditclientComponent implements OnInit {
+export class EditClientComponent implements OnInit {
   id:string;
   client:Client = {
     firstName:'',

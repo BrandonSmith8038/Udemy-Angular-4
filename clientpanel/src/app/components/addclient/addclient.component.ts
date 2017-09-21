@@ -9,7 +9,7 @@ import { Client } from '../../models/client';
   templateUrl: './addclient.component.html',
   styleUrls: ['./addclient.component.css']
 })
-export class AddclientComponent implements OnInit {
+export class AddClientComponent implements OnInit {
   client: Client = {
     firstName: '',
     lastName: '',

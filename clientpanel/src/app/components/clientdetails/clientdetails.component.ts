@@ -9,7 +9,7 @@ import { Client } from '../../models/client';
   templateUrl: './clientdetails.component.html',
   styleUrls: ['./clientdetails.component.css']
 })
-export class ClientdetailsComponent implements OnInit {
+export class ClientDetailsComponent implements OnInit {
   id:string;
   client:Client;
   // tslint:disable-next-line:no-inferrable-types
