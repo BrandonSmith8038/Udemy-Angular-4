@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { Router } from '@angular/router';
 import { ClientService } from '../../services/client.service';
-import { Client } from '../../models/Client';
+import { Client } from '../../models/client';
 
 @Component({
   selector: 'app-addclient',

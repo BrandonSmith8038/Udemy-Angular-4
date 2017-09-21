@@ -14,5 +14,17 @@ export class AuthService {
     err => reject(err));
     });
   }
+  
+  // Check User Status
+  
+  getAuth(){
+    return this.afAuth.authState.map(auth => auth);
+  }
+  
+  //Logout User
+  
+  logout(){
+    this.afAuth.auth.signOut();
+  }
 
 }
